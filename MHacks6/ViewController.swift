@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import Foundation
 
-class ViewController: UIViewController {
+class CareTakerProfileScreen: UIStackView {
+    @IBOutlet var propic: UIImageView?
+    @IBOutlet weak var biotext: UITextView?
+}
 
+class ViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet var careTakerScrollView: UIScrollView!
+    @IBOutlet var pro: CareTakerProfileScreen!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        pro.biotext!.text = "I'm a family man and I make crass jokes when I'm not on full house"
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A96771381BA42A9200313CD3 /* Illini.png in Resources */ = {isa = PBXBuildFile; fileRef = A96771371BA42A9200313CD3 /* Illini.png */; settings = {ASSET_TAGS = (); }; };
+		A967713C1BA48C0600313CD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A967713B1BA48C0600313CD3 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A9DFA0261BA3F5090007FD0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFA0251BA3F5090007FD0D /* AppDelegate.swift */; };
-		A9DFA0281BA3F5090007FD0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFA0271BA3F5090007FD0D /* ViewController.swift */; };
+		A9DFA0281BA3F5090007FD0D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFA0271BA3F5090007FD0D /* HomeTableViewController.swift */; };
 		A9DFA02B1BA3F5090007FD0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DFA0291BA3F5090007FD0D /* Main.storyboard */; };
 		A9DFA02D1BA3F5090007FD0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DFA02C1BA3F5090007FD0D /* Assets.xcassets */; };
 		A9DFA0301BA3F5090007FD0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DFA02E1BA3F5090007FD0D /* LaunchScreen.storyboard */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A96771371BA42A9200313CD3 /* Illini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Illini.png; sourceTree = "<group>"; };
+		A967713B1BA48C0600313CD3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A9DFA0221BA3F5090007FD0D /* MHacks6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHacks6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DFA0251BA3F5090007FD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9DFA0271BA3F5090007FD0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9DFA0271BA3F5090007FD0D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		A9DFA02A1BA3F5090007FD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9DFA02C1BA3F5090007FD0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9DFA02F1BA3F5090007FD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				A9DFA0251BA3F5090007FD0D /* AppDelegate.swift */,
-				A9DFA0271BA3F5090007FD0D /* ViewController.swift */,
+				A9DFA0271BA3F5090007FD0D /* HomeTableViewController.swift */,
 				A9DFA0291BA3F5090007FD0D /* Main.storyboard */,
 				A9DFA02C1BA3F5090007FD0D /* Assets.xcassets */,
 				A9DFA02E1BA3F5090007FD0D /* LaunchScreen.storyboard */,
 				A9DFA0311BA3F5090007FD0D /* Info.plist */,
+				A96771371BA42A9200313CD3 /* Illini.png */,
+				A967713B1BA48C0600313CD3 /* ViewController.swift */,
 			);
 			path = MHacks6;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 				TargetAttributes = {
 					A9DFA0211BA3F5090007FD0D = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 6T66YGC736;
 					};
 					A9DFA0351BA3F5090007FD0D = {
 						CreatedOnToolsVersion = 7.0;
@@ -230,6 +237,7 @@
 			files = (
 				A9DFA0301BA3F5090007FD0D /* LaunchScreen.storyboard in Resources */,
 				A9DFA02D1BA3F5090007FD0D /* Assets.xcassets in Resources */,
+				A96771381BA42A9200313CD3 /* Illini.png in Resources */,
 				A9DFA02B1BA3F5090007FD0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,7 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DFA0281BA3F5090007FD0D /* ViewController.swift in Sources */,
+				A967713C1BA48C0600313CD3 /* ViewController.swift in Sources */,
+				A9DFA0281BA3F5090007FD0D /* HomeTableViewController.swift in Sources */,
 				A9DFA0261BA3F5090007FD0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,10 +405,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MHacks6/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dimvas.MHacks6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -407,10 +419,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MHacks6/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dimvas.MHacks6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -481,6 +496,7 @@
 				A9DFA04C1BA3F5090007FD0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9DFA04D1BA3F5090007FD0D /* Build configuration list for PBXNativeTarget "MHacks6Tests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +505,7 @@
 				A9DFA04F1BA3F5090007FD0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9DFA0501BA3F5090007FD0D /* Build configuration list for PBXNativeTarget "MHacks6UITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +514,7 @@
 				A9DFA0521BA3F5090007FD0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
