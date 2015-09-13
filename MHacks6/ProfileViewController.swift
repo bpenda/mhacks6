@@ -15,7 +15,8 @@ class ProfileViewController: UIViewController, GIDSignInUIDelegate {
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
-    
+    @IBOutlet var name:UITextField?
+
 
     
     @IBAction func closeAction(){
@@ -40,7 +41,7 @@ class ProfileViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     func receiveNotification() {
-        //do something
+            name!.text = appDelegate.me.fname
     }
 
     

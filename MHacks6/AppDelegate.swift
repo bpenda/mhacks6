@@ -85,9 +85,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     
                 }
             }
+            for i in 1...(self.caretakers.count-1) {
+                for j in 1...(self.caretakers.count-i) {
+                    if(self.caretakers[j-1].radius > self.caretakers[j].radius) {
+                        (self.caretakers[j-1], self.caretakers[j]) = (self.caretakers[j], self.caretakers[j-1])
+                    }
+                }
+            }
         self.notify(self.htvcNotificationKey)
 
         }
+        
+      
         session.resume()
 
 
@@ -109,6 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 me.fname = user.profile.name
                 me.email = user.profile.email
                 me.profPic = user.profile.imageURLWithDimension(100)
+                notify(profNotificationKey)
                 print("UsID: " + me.googleId + " name: " + me.fname + " email: " + me.email)
             } else {
                 print("\(error.localizedDescription)")

@@ -9,6 +9,10 @@
 import CoreLocation
 import UIKit
 
+struct TableData {
+    static var cell:Int = 0
+}
+
 class CareTableViewCell : UITableViewCell {
     @IBOutlet weak var lang0: UIImageView?
     @IBOutlet var lang1: UIImageView?
@@ -18,26 +22,69 @@ class CareTableViewCell : UITableViewCell {
     @IBOutlet var flag1: UILabel?
     @IBOutlet var flag2: UILabel?
     @IBOutlet var flag3: UILabel?
-    @IBOutlet var exp: UIImageView?
+    @IBOutlet var exp: UILabel?
     @IBOutlet weak var nameLabel: UILabel?
     @IBOutlet weak var distLabel: UILabel?
+    @IBOutlet weak var priceLabel: UILabel?
 
     
-    func loadItem(title title: String, image: String) {
-        lang0?.image = UIImage(named: image)
-        lang1?.image = UIImage(named: image)
-        lang2?.image = UIImage(named: image)
-        lang3?.image = UIImage(named: image)
+    func loadItem(title title: String, image: String, num:Int) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
+        if(!appDelegate.caretakers[num].petsAllowed )
+        {
+            lang0?.alpha = 0.1
+        }
+        if(!appDelegate.caretakers[num].canDrive )
+        {
+            lang1?.alpha = 0.1
+        }
+        if(!appDelegate.caretakers[num].canClean )
+        {
+            lang2?.alpha = 0.1
+        }
+        if(!appDelegate.caretakers[num].canCook )
+        {
+            lang2?.alpha = 0.1
+        }
+
         flag0?.text = "🇺🇸"
+        
 //        flag1?.image = UIImage(named: image)
 //        flag2?.image = UIImage(named: image)
 //        flag3?.image = UIImage(named: image)
         flag1?.text = nil
         flag2?.text = nil
         flag3?.text = nil
-        exp?.image = UIImage(named: image)
+        if(appDelegate.caretakers[num].language == "German")
+        {
+            flag1?.text = "🇩🇪"
+        }
+        if(appDelegate.caretakers[num].language == "Italian")
+        {
+            flag1?.text = "🇮🇹"
+        }
+        if(appDelegate.caretakers[num].language == "French")
+        {
+            flag1?.text = "🇫🇷"
+        }
+  
+        if(appDelegate.caretakers[num].language == "Spanish")
+        {
+            flag1?.text = "🇦🇷"
+        }
+        if(appDelegate.caretakers[num].language == "Albanian")
+        {
+            flag1?.text = "🇦🇱"
+        }
+        if(appDelegate.caretakers[num].language == "Ukrainian")
+        {
+            flag1?.text = "🇺🇦"
+        }
         nameLabel?.text = title
-        distLabel?.text = "2 mi"
+        exp?.text = appDelegate.caretakers[num].experience + "yrs"
+        priceLabel?.text = "$" + appDelegate.caretakers[num].priceRange
+        distLabel?.text = (appDelegate.caretakers[num].radius as NSNumber).stringValue + " mi"
         
 
     }
@@ -66,6 +113,7 @@ class HomeTableViewController: UITableViewController , CLLocationManagerDelegate
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "receiveNotification", name: myNotificationKey, object: nil)
         caretakers = appDelegate.caretakers
         length = caretakers.count
+        self.refreshControl?.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
 
 
     }
@@ -120,11 +168,27 @@ class HomeTableViewController: UITableViewController , CLLocationManagerDelegate
     cell.layoutIfNeeded()
 
     
-        cell.loadItem(title: caretakers[indexPath.row].fname + " " + caretakers[indexPath.row].lname, image: "Illini")
+    cell.loadItem(title: caretakers[indexPath.row].fname + " " + caretakers[indexPath.row].lname, image: "Illini", num:indexPath.row)
     
     
     
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //CODE TO BE RUN ON CELL TOUCH
+        TableData.cell = indexPath.row
+    }
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        // Do some reloading of data and update the table view's data source
+        // Fetch more objects from a web service, for example...
+        
+        // Simply adding an object to the data source for this example
+       
+        
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
     }
 
 
