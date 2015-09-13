@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		A96771381BA42A9200313CD3 /* Illini.png in Resources */ = {isa = PBXBuildFile; fileRef = A96771371BA42A9200313CD3 /* Illini.png */; settings = {ASSET_TAGS = (); }; };
 		A967713C1BA48C0600313CD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A967713B1BA48C0600313CD3 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A967713E1BA4C4F800313CD3 /* UserClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A967713D1BA4C4F800313CD3 /* UserClasses.swift */; settings = {ASSET_TAGS = (); }; };
+		A96771401BA4FE5600313CD3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A967713F1BA4FE5600313CD3 /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A96771421BA4FE6400313CD3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96771411BA4FE6400313CD3 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A96771441BA5159700313CD3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96771431BA5159600313CD3 /* CoreLocation.framework */; };
+		A96771461BA525BC00313CD3 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96771451BA525BC00313CD3 /* AddressBook.framework */; };
+		A96771481BA525C500313CD3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96771471BA525C500313CD3 /* StoreKit.framework */; };
+		A967714A1BA525E200313CD3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96771491BA525E200313CD3 /* SystemConfiguration.framework */; };
+		A967714E1BA539CF00313CD3 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A967714D1BA539CF00313CD3 /* GoogleSignIn.framework */; };
+		A96771531BA55F1B00313CD3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96771521BA55F1B00313CD3 /* GoogleService-Info.plist */; settings = {ASSET_TAGS = (); }; };
 		A9DFA0261BA3F5090007FD0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFA0251BA3F5090007FD0D /* AppDelegate.swift */; };
 		A9DFA0281BA3F5090007FD0D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFA0271BA3F5090007FD0D /* HomeTableViewController.swift */; };
 		A9DFA02B1BA3F5090007FD0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DFA0291BA3F5090007FD0D /* Main.storyboard */; };
@@ -36,8 +45,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1249F43B620B6B7EA7374D0F /* Pods-MHacks6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHacks6.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHacks6/Pods-MHacks6.release.xcconfig"; sourceTree = "<group>"; };
+		2B1A1F7B650C7F62F488ADDE /* libPods-MHacks6.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MHacks6.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		583F0E8979E8D83355C47650 /* Pods-MHacks6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHacks6.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHacks6/Pods-MHacks6.debug.xcconfig"; sourceTree = "<group>"; };
 		A96771371BA42A9200313CD3 /* Illini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Illini.png; sourceTree = "<group>"; };
 		A967713B1BA48C0600313CD3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A967713D1BA4C4F800313CD3 /* UserClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClasses.swift; sourceTree = "<group>"; };
+		A967713F1BA4FE5600313CD3 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A96771411BA4FE6400313CD3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A96771431BA5159600313CD3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A96771451BA525BC00313CD3 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		A96771471BA525C500313CD3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A96771491BA525E200313CD3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A967714B1BA537DE00313CD3 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		A967714D1BA539CF00313CD3 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		A967714F1BA53E0C00313CD3 /* MHacks6-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHacks6-Bridging-Header.h"; sourceTree = "<group>"; };
+		A96771521BA55F1B00313CD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9DFA0221BA3F5090007FD0D /* MHacks6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHacks6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DFA0251BA3F5090007FD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9DFA0271BA3F5090007FD0D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +81,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A967714E1BA539CF00313CD3 /* GoogleSignIn.framework in Frameworks */,
+				A967714A1BA525E200313CD3 /* SystemConfiguration.framework in Frameworks */,
+				A96771481BA525C500313CD3 /* StoreKit.framework in Frameworks */,
+				A96771461BA525BC00313CD3 /* AddressBook.framework in Frameworks */,
+				A96771441BA5159700313CD3 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +106,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6007BA8A732992387C441DDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B1A1F7B650C7F62F488ADDE /* libPods-MHacks6.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A9DFA0191BA3F5090007FD0D = {
 			isa = PBXGroup;
 			children = (
+				A967714D1BA539CF00313CD3 /* GoogleSignIn.framework */,
+				A967714B1BA537DE00313CD3 /* GoogleSignIn.bundle */,
+				A96771491BA525E200313CD3 /* SystemConfiguration.framework */,
+				A96771471BA525C500313CD3 /* StoreKit.framework */,
+				A96771451BA525BC00313CD3 /* AddressBook.framework */,
+				A96771431BA5159600313CD3 /* CoreLocation.framework */,
 				A9DFA0241BA3F5090007FD0D /* MHacks6 */,
 				A9DFA0391BA3F5090007FD0D /* MHacks6Tests */,
 				A9DFA0441BA3F5090007FD0D /* MHacks6UITests */,
 				A9DFA0231BA3F5090007FD0D /* Products */,
+				F5E7CED73F5459E9846F45CD /* Pods */,
+				6007BA8A732992387C441DDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +145,7 @@
 		A9DFA0241BA3F5090007FD0D /* MHacks6 */ = {
 			isa = PBXGroup;
 			children = (
+				A96771521BA55F1B00313CD3 /* GoogleService-Info.plist */,
 				A9DFA0251BA3F5090007FD0D /* AppDelegate.swift */,
 				A9DFA0271BA3F5090007FD0D /* HomeTableViewController.swift */,
 				A9DFA0291BA3F5090007FD0D /* Main.storyboard */,
@@ -109,6 +154,10 @@
 				A9DFA0311BA3F5090007FD0D /* Info.plist */,
 				A96771371BA42A9200313CD3 /* Illini.png */,
 				A967713B1BA48C0600313CD3 /* ViewController.swift */,
+				A967713D1BA4C4F800313CD3 /* UserClasses.swift */,
+				A967713F1BA4FE5600313CD3 /* SearchViewController.swift */,
+				A96771411BA4FE6400313CD3 /* ProfileViewController.swift */,
+				A967714F1BA53E0C00313CD3 /* MHacks6-Bridging-Header.h */,
 			);
 			path = MHacks6;
 			sourceTree = "<group>";
@@ -131,6 +180,15 @@
 			path = MHacks6UITests;
 			sourceTree = "<group>";
 		};
+		F5E7CED73F5459E9846F45CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				583F0E8979E8D83355C47650 /* Pods-MHacks6.debug.xcconfig */,
+				1249F43B620B6B7EA7374D0F /* Pods-MHacks6.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9DFA04A1BA3F5090007FD0D /* Build configuration list for PBXNativeTarget "MHacks6" */;
 			buildPhases = (
+				CE0AA107A784455716D4BBF9 /* Check Pods Manifest.lock */,
 				A9DFA01E1BA3F5090007FD0D /* Sources */,
 				A9DFA01F1BA3F5090007FD0D /* Frameworks */,
 				A9DFA0201BA3F5090007FD0D /* Resources */,
+				93C41E64230C4E6FFA702A6B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +253,10 @@
 		A9DFA01A1BA3F5090007FD0D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Vasil Pendavinji";
 				TargetAttributes = {
@@ -237,6 +301,7 @@
 			files = (
 				A9DFA0301BA3F5090007FD0D /* LaunchScreen.storyboard in Resources */,
 				A9DFA02D1BA3F5090007FD0D /* Assets.xcassets in Resources */,
+				A96771531BA55F1B00313CD3 /* GoogleService-Info.plist in Resources */,
 				A96771381BA42A9200313CD3 /* Illini.png in Resources */,
 				A9DFA02B1BA3F5090007FD0D /* Main.storyboard in Resources */,
 			);
@@ -258,11 +323,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		93C41E64230C4E6FFA702A6B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHacks6/Pods-MHacks6-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE0AA107A784455716D4BBF9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9DFA01E1BA3F5090007FD0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96771421BA4FE6400313CD3 /* ProfileViewController.swift in Sources */,
+				A96771401BA4FE5600313CD3 /* SearchViewController.swift in Sources */,
+				A967713E1BA4C4F800313CD3 /* UserClasses.swift in Sources */,
 				A967713C1BA48C0600313CD3 /* ViewController.swift in Sources */,
 				A9DFA0281BA3F5090007FD0D /* HomeTableViewController.swift in Sources */,
 				A9DFA0261BA3F5090007FD0D /* AppDelegate.swift in Sources */,
@@ -403,29 +504,48 @@
 		};
 		A9DFA04B1BA3F5090007FD0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 583F0E8979E8D83355C47650 /* Pods-MHacks6.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MHacks6/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dimvas.MHacks6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MHacks6/MHacks6-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A9DFA04C1BA3F5090007FD0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1249F43B620B6B7EA7374D0F /* Pods-MHacks6.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MHacks6/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dimvas.MHacks6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MHacks6/MHacks6-Bridging-Header.h";
 			};
 			name = Release;
 		};

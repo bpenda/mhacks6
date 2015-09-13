@@ -6,6 +6,7 @@
 //  Copyright © 2015 Vasil Pendavinji. All rights reserved.
 //
 
+import CoreLocation
 import UIKit
 
 class CareTableViewCell : UITableViewCell {
@@ -13,10 +14,10 @@ class CareTableViewCell : UITableViewCell {
     @IBOutlet var lang1: UIImageView?
     @IBOutlet var lang2: UIImageView?
     @IBOutlet var lang3: UIImageView?
-    @IBOutlet var flag0: UIImageView?
-    @IBOutlet var flag1: UIImageView?
-    @IBOutlet var flag2: UIImageView?
-    @IBOutlet var flag3: UIImageView?
+    @IBOutlet var flag0: UILabel?
+    @IBOutlet var flag1: UILabel?
+    @IBOutlet var flag2: UILabel?
+    @IBOutlet var flag3: UILabel?
     @IBOutlet var exp: UIImageView?
     @IBOutlet weak var nameLabel: UILabel?
     @IBOutlet weak var distLabel: UILabel?
@@ -27,13 +28,13 @@ class CareTableViewCell : UITableViewCell {
         lang1?.image = UIImage(named: image)
         lang2?.image = UIImage(named: image)
         lang3?.image = UIImage(named: image)
-        flag0?.image = UIImage(named: image)
+        flag0?.text = "🇺🇸"
 //        flag1?.image = UIImage(named: image)
 //        flag2?.image = UIImage(named: image)
 //        flag3?.image = UIImage(named: image)
-        flag1?.image = nil
-        flag2?.image = nil
-        flag3?.image = nil
+        flag1?.text = nil
+        flag2?.text = nil
+        flag3?.text = nil
         exp?.image = UIImage(named: image)
         nameLabel?.text = title
         distLabel?.text = "2 mi"
@@ -43,10 +44,17 @@ class CareTableViewCell : UITableViewCell {
 }
 
 
-class HomeTableViewController: UITableViewController {
-
+class HomeTableViewController: UITableViewController , CLLocationManagerDelegate{
+    var manager:CLLocationManager!
+    var location : CLLocation!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.manager = CLLocationManager()
+        self.manager.delegate = self;
+        self.manager.desiredAccuracy = kCLLocationAccuracyBest
+        self.manager.requestAlwaysAuthorization()
+        self.manager.startUpdatingLocation()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.estimatedRowHeight = 120
     }
@@ -55,7 +63,25 @@ class HomeTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        manager.stopUpdatingLocation()
+//        self.location = locations[0] as CLLocation
+//        print("Location: ")
+//        print(location)
+//    }
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations : [CLLocation]){
+        manager.stopUpdatingLocation()
+        self.location = locations[0] as CLLocation
+                print("Location: ")
+                print(location)
+    }
     
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error:" + error.localizedDescription)
+    }
+
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
