@@ -2,27 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>Pods-MHacks6.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>94B69E5FAEEA3E19A99E5DA7C94B9998</key>
+		<key>2E4FEFDA19575BE100351305</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
+		<key>2E4FEFE519575BE100351305</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C7DFC5A1A9102BD005AA3F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C7DFC641A9102BD005AA3F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -80,5 +80,10 @@
 	<key>IS_GCM_ENABLED</key>
 	<false/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/></dict>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+     <dict>
+          <key>NSAllowsArbitraryLoads</key><true/>
+     </dict> 
+	</dict>
 </plist>

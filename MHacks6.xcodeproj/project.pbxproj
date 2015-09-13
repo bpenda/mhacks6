@@ -18,6 +18,7 @@
 		A967714A1BA525E200313CD3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96771491BA525E200313CD3 /* SystemConfiguration.framework */; };
 		A967714E1BA539CF00313CD3 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A967714D1BA539CF00313CD3 /* GoogleSignIn.framework */; };
 		A96771531BA55F1B00313CD3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96771521BA55F1B00313CD3 /* GoogleService-Info.plist */; settings = {ASSET_TAGS = (); }; };
+		A967717A1BA571E300313CD3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A967716C1BA5702400313CD3 /* SwiftyJSON.framework */; };
 		A9DFA0261BA3F5090007FD0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFA0251BA3F5090007FD0D /* AppDelegate.swift */; };
 		A9DFA0281BA3F5090007FD0D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFA0271BA3F5090007FD0D /* HomeTableViewController.swift */; };
 		A9DFA02B1BA3F5090007FD0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DFA0291BA3F5090007FD0D /* Main.storyboard */; };
@@ -25,9 +26,38 @@
 		A9DFA0301BA3F5090007FD0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DFA02E1BA3F5090007FD0D /* LaunchScreen.storyboard */; };
 		A9DFA03B1BA3F5090007FD0D /* MHacks6Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFA03A1BA3F5090007FD0D /* MHacks6Tests.swift */; };
 		A9DFA0461BA3F5090007FD0D /* MHacks6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DFA0451BA3F5090007FD0D /* MHacks6UITests.swift */; };
+		DC8E2AC9585245CBE6BD9325 /* Pods_MHacks6.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBFDDD0B3CDD160A8419901 /* Pods_MHacks6.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A967716B1BA5702400313CD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A96771641BA5702400313CD3 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		A967716D1BA5702400313CD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A96771641BA5702400313CD3 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = "SwiftyJSON iOS Tests";
+		};
+		A967716F1BA5702400313CD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A96771641BA5702400313CD3 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC5B1A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX";
+		};
+		A96771711BA5702400313CD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A96771641BA5702400313CD3 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC651A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX Tests";
+		};
 		A9DFA0371BA3F5090007FD0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9DFA01A1BA3F5090007FD0D /* Project object */;
@@ -46,8 +76,8 @@
 
 /* Begin PBXFileReference section */
 		1249F43B620B6B7EA7374D0F /* Pods-MHacks6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHacks6.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHacks6/Pods-MHacks6.release.xcconfig"; sourceTree = "<group>"; };
-		2B1A1F7B650C7F62F488ADDE /* libPods-MHacks6.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MHacks6.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		583F0E8979E8D83355C47650 /* Pods-MHacks6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHacks6.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHacks6/Pods-MHacks6.debug.xcconfig"; sourceTree = "<group>"; };
+		5EBFDDD0B3CDD160A8419901 /* Pods_MHacks6.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHacks6.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96771371BA42A9200313CD3 /* Illini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Illini.png; sourceTree = "<group>"; };
 		A967713B1BA48C0600313CD3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A967713D1BA4C4F800313CD3 /* UserClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClasses.swift; sourceTree = "<group>"; };
@@ -61,6 +91,7 @@
 		A967714D1BA539CF00313CD3 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		A967714F1BA53E0C00313CD3 /* MHacks6-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHacks6-Bridging-Header.h"; sourceTree = "<group>"; };
 		A96771521BA55F1B00313CD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A96771641BA5702400313CD3 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		A9DFA0221BA3F5090007FD0D /* MHacks6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHacks6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DFA0251BA3F5090007FD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9DFA0271BA3F5090007FD0D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -81,11 +112,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A967717A1BA571E300313CD3 /* SwiftyJSON.framework in Frameworks */,
 				A967714E1BA539CF00313CD3 /* GoogleSignIn.framework in Frameworks */,
 				A967714A1BA525E200313CD3 /* SystemConfiguration.framework in Frameworks */,
 				A96771481BA525C500313CD3 /* StoreKit.framework in Frameworks */,
 				A96771461BA525BC00313CD3 /* AddressBook.framework in Frameworks */,
 				A96771441BA5159700313CD3 /* CoreLocation.framework in Frameworks */,
+				DC8E2AC9585245CBE6BD9325 /* Pods_MHacks6.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,9 +142,21 @@
 		6007BA8A732992387C441DDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2B1A1F7B650C7F62F488ADDE /* libPods-MHacks6.a */,
+				A96771641BA5702400313CD3 /* SwiftyJSON.xcodeproj */,
+				5EBFDDD0B3CDD160A8419901 /* Pods_MHacks6.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A96771651BA5702400313CD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A967716C1BA5702400313CD3 /* SwiftyJSON.framework */,
+				A967716E1BA5702400313CD3 /* SwiftyJSON iOS Tests.xctest */,
+				A96771701BA5702400313CD3 /* SwiftyJSON.framework */,
+				A96771721BA5702400313CD3 /* SwiftyJSON OSX Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A9DFA0191BA3F5090007FD0D = {
@@ -201,6 +246,7 @@
 				A9DFA01F1BA3F5090007FD0D /* Frameworks */,
 				A9DFA0201BA3F5090007FD0D /* Resources */,
 				93C41E64230C4E6FFA702A6B /* Copy Pods Resources */,
+				8E5C081E80E9ACA28F6605A9 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +302,7 @@
 				KnownAssetTags = (
 					New,
 				);
+				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Vasil Pendavinji";
@@ -285,6 +332,12 @@
 			mainGroup = A9DFA0191BA3F5090007FD0D;
 			productRefGroup = A9DFA0231BA3F5090007FD0D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A96771651BA5702400313CD3 /* Products */;
+					ProjectRef = A96771641BA5702400313CD3 /* SwiftyJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A9DFA0211BA3F5090007FD0D /* MHacks6 */,
@@ -293,6 +346,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A967716C1BA5702400313CD3 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = A967716B1BA5702400313CD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A967716E1BA5702400313CD3 /* SwiftyJSON iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON iOS Tests.xctest";
+			remoteRef = A967716D1BA5702400313CD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A96771701BA5702400313CD3 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = A967716F1BA5702400313CD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A96771721BA5702400313CD3 /* SwiftyJSON OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON OSX Tests.xctest";
+			remoteRef = A96771711BA5702400313CD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A9DFA0201BA3F5090007FD0D /* Resources */ = {
@@ -324,6 +408,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8E5C081E80E9ACA28F6605A9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHacks6/Pods-MHacks6-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		93C41E64230C4E6FFA702A6B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

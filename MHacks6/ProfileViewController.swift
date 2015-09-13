@@ -9,6 +9,14 @@
 import UIKit
 
 class ProfileViewController: UIViewController, GIDSignInUIDelegate {
+    let myNotificationKey = "com.dimvas.MHacks6.prof"
+    let htvcNotificationKey = "com.dimvas.MHacks6.htvc"
+    let delegateNotificationKey = "com.dimvas.MHacks6.delegate"
+    
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
+    
+
     
     @IBAction func closeAction(){
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -19,13 +27,23 @@ class ProfileViewController: UIViewController, GIDSignInUIDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         
         GIDSignIn.sharedInstance().uiDelegate = self
+        
+         NSNotificationCenter.defaultCenter().addObserver(self, selector: "receiveNotification", name: myNotificationKey, object: nil)
 
         // Uncomment to automatically sign in the user.
         //GIDSignIn.sharedInstance().signInSilently()
 
-
-
     }
+    
+    func notify(key:String) {
+        NSNotificationCenter.defaultCenter().postNotificationName(key, object: self)
+    }
+    
+    func receiveNotification() {
+        //do something
+    }
+
+    
     @IBAction func didTapSignOut(sender: AnyObject) {
         GIDSignIn.sharedInstance().signOut()
     }

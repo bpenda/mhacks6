@@ -7,25 +7,91 @@
 //
 
 import UIKit
+import SwiftyJSON
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    let myNotificationKey = "com.dimvas.MHacks6.delegate"
+    let htvcNotificationKey = "com.dimvas.MHacks6.htvc"
+    let profNotificationKey = "com.dimvas.MHacks6.prof"
+
 
     var window: UIWindow?
+    var me: Carereceiver = Carereceiver()
+    var caretakers = [Caretaker]()
     
+    @IBAction func didTapSignOut(sender: AnyObject) {
+        GIDSignIn.sharedInstance().signOut()
+    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Initialize sign-in
-        
         GIDSignIn.sharedInstance().delegate = self
-        
         GIDSignIn.sharedInstance().clientID = "239469958871-kgrm5236242vhsrusoer3ia77bbluths.apps.googleusercontent.com"
         
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "receiveNotification", name: myNotificationKey, object: nil)
 
+        
+        getData()
+        
         return true
     }
+    func notify(key:String) {
+        NSNotificationCenter.defaultCenter().postNotificationName(key, object: self)
+    }
     
+    func receiveNotification() {
+        //do something
+    }
+    
+    func getData(){
+        let request = NSURLRequest(URL: NSURL(string: "http://caremaker.tk/get/caretaker?town=champaign&state=il&zip=61820")!)
+        //API call
+        let session = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
+            
+            // Handle incoming data like you would in synchronous request
+            if let reply = data {
+                let json = JSON(data: reply)
+                //let stops = json["stops"]
+                
+                for item in json{
+                    print(item)
+                    let caretaker:Caretaker = Caretaker()
+                    caretaker.lat = item.1["x_coord"].float!
+                    caretaker.lon = item.1["y_coord"].float!
+                    caretaker.fname = item.1["first_name"].string!
+                    caretaker.lname = item.1["last_name"].string!
+                    caretaker.town = item.1["town"].string!
+                    caretaker.state = item.1["state"].string!
+                    caretaker.zip = item.1["zip"].int!
+                    caretaker.radius = item.1["radius"].int!
+                    caretaker.language = item.1["language"].string!
+                    caretaker.experience = item.1["experience"].string!
+                    caretaker.gender = item.1["gender"].string!
+                    caretaker.profPic = item.1["pic_url"].string!
+                    caretaker.email = item.1["email"].string!
+                    caretaker.canCook = item.1["can_cook"].boolValue
+                    caretaker.canDrive = item.1["can_drive"].boolValue
+                    caretaker.canClean = item.1["can_clean"].boolValue
+                    caretaker.skillsExpl = item.1["skills_explanation"].string!
+                    caretaker.bio = item.1["bio"].string!
+                    caretaker.priceRange = item.1["price_range"].string!
+                    caretaker.petsAllowed = item.1["pets_allowed"].boolValue
+                    
+                    self.caretakers.append(caretaker)
+                    
+                }
+            }
+        self.notify(self.htvcNotificationKey)
+
+        }
+        session.resume()
+
+
+    }
     
     func application(application: UIApplication,
         openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
@@ -38,12 +104,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         withError error: NSError!) {
             if (error == nil) {
                 // Perform any operations on signed in user here.
-                let userId = user.userID                  // For client-side use only!
-                let idToken = user.authentication.idToken // Safe to send to the server
-                let name = user.profile.name
-                let email = user.profile.email
-                let propic = user.profile.imageURLWithDimension(100)
-                print("UsID: " + userId + " name: " + name + " email: " + email)
+                me.googleId = user.userID                  // For client-side use only!
+                me.token = user.authentication.idToken // Safe to send to the server
+                me.fname = user.profile.name
+                me.email = user.profile.email
+                me.profPic = user.profile.imageURLWithDimension(100)
+                print("UsID: " + me.googleId + " name: " + me.fname + " email: " + me.email)
             } else {
                 print("\(error.localizedDescription)")
             }

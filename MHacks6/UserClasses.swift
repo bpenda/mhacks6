@@ -55,7 +55,8 @@ class Carereceiver {
     var language:String = ""
     var locationId:Int = 0
     var gender:String = ""
-    var profPic:String = ""
+    var profPic:NSURL = NSURL()
+    var token:String = ""
     var googleId:String = ""
     var email:String = ""
 

@@ -47,7 +47,13 @@ class CareTableViewCell : UITableViewCell {
 class HomeTableViewController: UITableViewController , CLLocationManagerDelegate{
     var manager:CLLocationManager!
     var location : CLLocation!
-    
+    let myNotificationKey = "com.dimvas.MHacks6.htvc"
+    let delegateNotificationKey = "com.dimvas.MHacks6.delegate"
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var caretakers = [Caretaker]()
+    var length = 0
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.manager = CLLocationManager()
@@ -57,6 +63,11 @@ class HomeTableViewController: UITableViewController , CLLocationManagerDelegate
         self.manager.startUpdatingLocation()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.estimatedRowHeight = 120
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "receiveNotification", name: myNotificationKey, object: nil)
+        caretakers = appDelegate.caretakers
+        length = caretakers.count
+
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,12 +75,23 @@ class HomeTableViewController: UITableViewController , CLLocationManagerDelegate
         // Dispose of any resources that can be recreated.
     }
 
-//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        manager.stopUpdatingLocation()
-//        self.location = locations[0] as CLLocation
-//        print("Location: ")
-//        print(location)
-//    }
+    
+    
+    
+    
+    func notify(key:String) {
+        NSNotificationCenter.defaultCenter().postNotificationName(key, object: self)
+    }
+
+    func receiveNotification() {
+        caretakers = appDelegate.caretakers
+        length = caretakers.count
+        dispatch_async(dispatch_get_main_queue()) {
+            self.tableView.reloadData()
+        }
+        print("caretakers length: " +  (caretakers.count as NSNumber).stringValue)
+    }
+
     func locationManager(manager: CLLocationManager, didUpdateLocations locations : [CLLocation]){
         manager.stopUpdatingLocation()
         self.location = locations[0] as CLLocation
@@ -84,7 +106,7 @@ class HomeTableViewController: UITableViewController , CLLocationManagerDelegate
 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return length
     }
     
     
@@ -98,7 +120,7 @@ class HomeTableViewController: UITableViewController , CLLocationManagerDelegate
     cell.layoutIfNeeded()
 
     
-        cell.loadItem(title: "Bob Saget", image: "Illini")
+        cell.loadItem(title: caretakers[indexPath.row].fname + " " + caretakers[indexPath.row].lname, image: "Illini")
     
     
     

@@ -1,0 +1,6 @@
+framework module Pods_MHacks6 {
+  umbrella header "Pods-MHacks6-umbrella.h"
+
+  export *
+  module * { export * }
+}
